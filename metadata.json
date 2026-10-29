@@ -1,0 +1,6 @@
+{
+  "name": "MindWaveMine R&D Interface",
+  "description": "A React + FastAPI interface for the MindWaveMine research workflow, streamlining concept creation, building, and reporting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
