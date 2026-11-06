@@ -183,7 +183,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ workspace, addLog, refresh
 
         {/* 4. Data Stream */}
         <div 
-            onClick={() => onNavigate('bridge')}
+            onClick={() => onNavigate('ingestion')}
             className="glass-panel p-5 rounded-sm border-t border-orange-500/30 cursor-pointer hover:bg-orange-900/10 transition-all group"
         >
           <div className="flex justify-between items-end">
@@ -193,7 +193,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ workspace, addLog, refresh
              </div>
              <div className="text-right">
                 <span className="px-2 py-1 bg-orange-900/30 text-[9px] text-orange-300 border border-orange-500/30 rounded-sm uppercase tracking-wider group-hover:bg-orange-500 group-hover:text-white transition-colors">
-                    View Stream &gt;
+                    Data Stream &gt;
                 </span>
              </div>
           </div>
@@ -223,11 +223,11 @@ export const Dashboard: React.FC<DashboardProps> = ({ workspace, addLog, refresh
                             <div className={`w-3 h-3 border ${backupDb ? 'bg-cyan-400 border-cyan-400 shadow-[0_0_8px_#22d3ee]' : 'border-slate-500'}`}></div>
                             <span className="text-[10px] text-slate-400 uppercase tracking-wider">Backup Core</span>
                         </label>
-                         <button 
-                            onClick={() => onNavigate('matrix')} 
-                            className="text-[9px] text-cyan-600 hover:text-cyan-300 uppercase tracking-widest font-mono border-b border-transparent hover:border-cyan-500 transition-colors"
+                        <button 
+                            onClick={() => onNavigate('protocol')} 
+                            className="text-[9px] text-purple-400 hover:text-purple-200 uppercase tracking-widest font-mono border-b border-transparent hover:border-purple-400 transition-colors"
                         >
-                            [ INVOKE GLOBAL AGENT ]
+                            [ §9 WORKFLOW PROTOCOL ]
                         </button>
                     </div>
                 </div>

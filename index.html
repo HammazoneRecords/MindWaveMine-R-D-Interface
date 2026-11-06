@@ -3,83 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MindWaveMine // Andromedan Interface</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>MindWaveMine R&D Interface</title>
+    <meta name="description" content="A full-stack interface for the MindWaveMine research workflow, streamlining concept creation, invariant verification, and batch reporting." />
+    <meta property="og:title" content="MindWaveMine R&D Interface" />
+    <meta property="og:description" content="A full-stack interface for the MindWaveMine research workflow, streamlining concept creation, invariant verification, and batch reporting." />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-      /* Custom scrollbar */
-      .scrollbar-thin::-webkit-scrollbar {
-        width: 6px;
-        height: 6px;
-      }
-      .scrollbar-thin::-webkit-scrollbar-track {
-        background: #0f0c29; 
-      }
-      .scrollbar-thin::-webkit-scrollbar-thumb {
-        background: #302b63; 
-        border: 1px solid #24243e;
-      }
-      .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-        background: #a855f7; 
-      }
-      
-      body {
-        background: #0f0c29;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        color: #e0e7ff;
-      }
-
-      /* Starfield animation effect could be added here, but keeping it simple/performant */
-      .glass-panel {
-        background: rgba(15, 23, 42, 0.6);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-      }
-      
-      .neon-border {
-        box-shadow: 0 0 5px rgba(168, 85, 247, 0.2), inset 0 0 5px rgba(168, 85, 247, 0.1); 
-      }
-
-      .text-glow {
-        text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
-      }
-
-      /* Utility Animations */
-      .bg-dots-pattern {
-        background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-        background-size: 20px 20px;
-      }
-      
-      @keyframes slideUp {
-        from { transform: translateY(100%); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-      }
-      .animate-slide-up {
-        animation: slideUp 0.3s ease-out forwards;
-      }
-
-      @keyframes spin-slow {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-      }
-      .animate-spin-slow {
-        animation: spin-slow 3s linear infinite;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "@google/genai": "https://esm.sh/@google/genai@^1.42.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/index.css">
+  </head>
   <body class="antialiased overflow-hidden font-['Rajdhani'] selection:bg-purple-500 selection:text-white">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>

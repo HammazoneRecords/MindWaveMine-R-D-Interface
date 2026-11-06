@@ -162,6 +162,14 @@ export const Ingestion: React.FC<IngestionProps> = ({ addLog }) => {
                   {/* Visual Content */}
                   {selectedFile.type === 'image' ? (
                     <img src={selectedFile.url} alt="Artifact" className={`max-h-[500px] object-contain border border-slate-800 shadow-2xl transition-all duration-500 ${extraction ? 'opacity-40 blur-sm' : 'opacity-100'}`} />
+                  ) : selectedFile.rawText ? (
+                    <div className={`w-full h-full min-h-[400px] bg-black/60 border border-slate-800 p-6 text-slate-300 font-mono text-xs overflow-auto whitespace-pre-wrap leading-relaxed transition-all duration-500 ${extraction ? 'opacity-40 blur-sm' : 'opacity-100'}`}>
+                      <div className="text-[10px] text-orange-400/70 border-b border-white/5 pb-2 mb-4 uppercase tracking-widest flex justify-between">
+                        <span>Terminal Buffer // {selectedFile.name}</span>
+                        <span>Size: {(selectedFile.size / 1024).toFixed(1)} KB</span>
+                      </div>
+                      {selectedFile.rawText}
+                    </div>
                   ) : (
                     <iframe 
                         src={selectedFile.url} 

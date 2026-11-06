@@ -1,0 +1,309 @@
+{
+  "workspace": {
+    "path": "/usr/local/mindwave/sector_7",
+    "isValid": true,
+    "hasDb": true,
+    "conceptCount": 142,
+    "lastRun": "2026-11-06T04:05:18.830Z"
+  },
+  "suggestions": {
+    "next_id": "116",
+    "current_batch": "mw_115",
+    "next_batch": "mw_116"
+  },
+  "files": [
+    {
+      "name": "mission_brief_mw115.txt",
+      "storedName": "mission_brief_mw115.txt",
+      "size": 1420,
+      "type": "text",
+      "lastModified": 1793934318830,
+      "id": "file_001",
+      "rawText": "MindWave Batch mw_115: Invariant verification and canonical receipts.\nScope: Frame stabilization (mw_11), TrueWill boundary enforcement (mw_72), Tri-Lens logic (mw_102)."
+    },
+    {
+      "name": "sector_lattice_map.png",
+      "storedName": "sector_lattice_map.png",
+      "size": 2048576,
+      "type": "image",
+      "lastModified": 1793930718830,
+      "id": "file_002"
+    },
+    {
+      "name": "xenolith_quantum_scan.json",
+      "storedName": "xenolith_quantum_scan.json",
+      "size": 890,
+      "type": "text",
+      "lastModified": 1793923518830,
+      "id": "file_003",
+      "rawText": "{\n  \"resonance\": 432.8,\n  \"coherence\": 0.998,\n  \"entropy_damping\": true,\n  \"target_sector\": \"mw_116_quantum_substrate\"\n}"
+    }
+  ],
+  "concepts": [
+    "011_frame_stabilization",
+    "065_witnessing_not_summary",
+    "072_truewill_coherence",
+    "092_receipt_chain_traceability",
+    "099_canonical_gate_e_check",
+    "102_tri_lens_verification",
+    "115_quantum_substrate_lattice"
+  ],
+  "fabrications": [
+    {
+      "id": "fab_1",
+      "type": "concept",
+      "content": "Zero Point Resonance Lattice (mw_115)",
+      "source": "mission_brief_mw115.txt",
+      "created_at": 1793937418830,
+      "tags": [
+        "PHYSICS",
+        "CORE",
+        "mw_115"
+      ]
+    },
+    {
+      "id": "fab_2",
+      "type": "idea",
+      "content": "Use bio-luminescent fiber nodes for quantum optical state diagnostics.",
+      "source": "sector_lattice_map.png",
+      "created_at": 1793937518830,
+      "tags": [
+        "UX",
+        "HARDWARE"
+      ]
+    },
+    {
+      "id": "fab_3",
+      "type": "claim",
+      "content": "A deterministic mechanism for cryptographic receipt chain validation across asynchronous node handoffs.",
+      "source": "xenolith_quantum_scan.json",
+      "created_at": 1793937618830,
+      "tags": [
+        "IP",
+        "PATENT"
+      ]
+    },
+    {
+      "id": "fab_4",
+      "type": "biz",
+      "content": "License real-time invariant verification oracle to distributed AI agent clusters.",
+      "source": "Internal Protocol",
+      "created_at": 1793937718830,
+      "tags": [
+        "REVENUE",
+        "ORACLE"
+      ]
+    },
+    {
+      "id": "fab_5",
+      "type": "invariant",
+      "content": "INV:MW115_1 — Every Source Code quote in 03_INVARIANTS must be an exact substring of the concept document.",
+      "source": "WORKFLOW_REFERENCE.md",
+      "created_at": 1793937818830,
+      "tags": [
+        "RULE",
+        "E_CHECK"
+      ]
+    }
+  ],
+  "workflowChecks": [
+    {
+      "id": "A1",
+      "phase": "phase_a",
+      "code": "A1",
+      "title": "Create Concept Doc",
+      "rule": "Create mindwave/mw_XX_snake_case_name.md (XX zero-padded, snake_case)",
+      "governingPrinciple": "One concept = one doc. No duplicate numbers.",
+      "completed": true,
+      "verified": true,
+      "evidence": "Created mw_115_quantum_substrate_lattice.md"
+    },
+    {
+      "id": "A2",
+      "phase": "phase_a",
+      "code": "A2",
+      "title": "Register in 00_INDEX.md",
+      "rule": "Add one row to mindwave/00_INDEX.md: | NN | [mw_NN_name](mw_NN_name.md) | description |",
+      "governingPrinciple": "Global table of all canonical units",
+      "completed": true,
+      "verified": true,
+      "evidence": "Row 115 registered in 00_INDEX.md"
+    },
+    {
+      "id": "A3",
+      "phase": "phase_a",
+      "code": "A3",
+      "title": "Bidirectional Related Links",
+      "rule": "Add Related: in the new doc. In each linked doc, add this mw_XX to its Related line (bidirectional).",
+      "governingPrinciple": "No orphaned nodes, bidirectional link graph",
+      "completed": true,
+      "verified": true,
+      "evidence": "Linked to mw_92, mw_99, mw_102"
+    },
+    {
+      "id": "A4",
+      "phase": "phase_a",
+      "code": "A4",
+      "title": "Section in 03_INVARIANTS.md",
+      "rule": "In mindwave/03_INVARIANTS.md add ## From mw_NN -- Title header",
+      "governingPrinciple": "Central invariant registry anchor",
+      "completed": true,
+      "verified": true
+    },
+    {
+      "id": "A5",
+      "phase": "phase_a",
+      "code": "A5",
+      "title": "Update INVARIANTS_INDEX_template.md",
+      "rule": "Add concept block and table (Invariant | Code | Link to 03)",
+      "governingPrinciple": "Quick navigation index for test suites",
+      "completed": true,
+      "verified": true
+    },
+    {
+      "id": "A6",
+      "phase": "phase_a",
+      "code": "A6",
+      "title": "Concept Doc Invariant Link",
+      "rule": "In new concept doc, link to INVARIANTS_INDEX_template and §5",
+      "governingPrinciple": "Bidirectional link to rules",
+      "completed": true,
+      "verified": true
+    },
+    {
+      "id": "B7",
+      "phase": "phase_b",
+      "code": "B7",
+      "title": "Derive Invariants From Concept Doc Only",
+      "rule": "Read concept doc; derive invariants only from this doc (no generic templates)",
+      "governingPrinciple": "Authentic domain derivation",
+      "completed": true,
+      "verified": true
+    },
+    {
+      "id": "B8",
+      "phase": "phase_b",
+      "code": "B8",
+      "title": "Extraction Checklist & Tri-Lens",
+      "rule": "Apply checklist: verbatim single-line quote (no ellipsis); Tri-Lens (English + Code + Math)",
+      "governingPrinciple": "Witnessing not summary (mw_65) & Tri-Lens (mw_102)",
+      "completed": true,
+      "verified": true
+    },
+    {
+      "id": "B9",
+      "phase": "phase_b",
+      "code": "B9",
+      "title": "Write Invariants in 03_INVARIANTS.md",
+      "rule": "Under ## From mw_NN, write ### Invariant N: (INV:MWNN_...) with anchors {#inv-mwNN-...}",
+      "governingPrinciple": "Permanent canonical invariant anchors",
+      "completed": true,
+      "verified": true
+    },
+    {
+      "id": "B10",
+      "phase": "phase_b",
+      "code": "B10",
+      "title": "Update Invariant Index Table",
+      "rule": "Add table rows: Invariant | Code | Link to 03 (#L<line>)",
+      "governingPrinciple": "Traceability index row count sync",
+      "completed": true,
+      "verified": true
+    },
+    {
+      "id": "B11",
+      "phase": "phase_b",
+      "code": "B11",
+      "title": "Canonical Invariant Quotes in Doc",
+      "rule": "Add section: \"Canonical invariant quotes (Source Code, for traceability)\" with exact phrases",
+      "governingPrinciple": "Receipt chain (mw_92): doc -> canonical quotes -> 03 -> validator",
+      "completed": true,
+      "verified": true
+    },
+    {
+      "id": "C12",
+      "phase": "phase_c",
+      "code": "C12",
+      "title": "Run Coherence Checks & E-Check",
+      "rule": "Run python mindwave/MW_SCRIPTS/run_mindwave_checks.py; E-check must pass (exit code 0)",
+      "governingPrinciple": "Canonical gate: no invariant canonical until it survives E (mw_99)",
+      "completed": true,
+      "verified": true
+    },
+    {
+      "id": "C13",
+      "phase": "phase_c",
+      "code": "C13",
+      "title": "Update Project Minutes",
+      "rule": "Update project_minutes.md: Last Updated, Batch summary, invariant coverage, next batch range",
+      "governingPrinciple": "Eternal history and continuity audit",
+      "completed": true,
+      "verified": true
+    },
+    {
+      "id": "E1",
+      "phase": "enhancement",
+      "code": "E1",
+      "title": "Enhancement Clarity Decision",
+      "rule": "Enhancement adds clarity. If it adds confusion, make no changes.",
+      "governingPrinciple": "Do no harm to stable concepts",
+      "completed": true,
+      "verified": true
+    },
+    {
+      "id": "E2",
+      "phase": "enhancement",
+      "code": "E2",
+      "title": "Non-Contradictory Doc Update",
+      "rule": "Edit mw_XX_*.md with clarity-preserving additions; never remove existing invariants",
+      "governingPrinciple": "Preserve existing invariants (mw_72)",
+      "completed": true,
+      "verified": true
+    },
+    {
+      "id": "E7",
+      "phase": "enhancement",
+      "code": "E7",
+      "title": "Re-run Coherence Checker",
+      "rule": "Run run_mindwave_checks.py from repo root after enhancement; E check must pass",
+      "governingPrinciple": "TrueWill frame stabilization (mw_11, mw_72)",
+      "completed": true,
+      "verified": true
+    }
+  ],
+  "invariants": [
+    {
+      "id": "INV:MW115_1",
+      "conceptId": "mw_115",
+      "conceptTitle": "Quantum Substrate Lattice",
+      "sourceCodeQuote": "The quantum lattice propagates excitation vectors across nearest-neighbor nodes within one Planck interval.",
+      "solobicLogic": "Latency minimization requires immediate topological neighbor delegation.",
+      "implementation": "lattice.propagate_vector(target=neighbors, max_latency=PLANCK_INTERVAL)",
+      "anchor": "inv-mw115-lattice-prop",
+      "canonicalDocQuoteVerified": true,
+      "lineReference": 142
+    },
+    {
+      "id": "INV:MW115_2",
+      "conceptId": "mw_115",
+      "conceptTitle": "Quantum Substrate Lattice",
+      "sourceCodeQuote": "No excitation vector may be extinguished without committing an irreversible receipt to the audit ledger.",
+      "solobicLogic": "Receipt chain preservation ensures full historical reproducibility.",
+      "implementation": "audit_ledger.commit_receipt(vector.id, vector.signature)",
+      "anchor": "inv-mw115-vector-receipt",
+      "canonicalDocQuoteVerified": true,
+      "lineReference": 168
+    },
+    {
+      "id": "INV:MW099_1",
+      "conceptId": "mw_099",
+      "conceptTitle": "Canonical Gate E Check",
+      "sourceCodeQuote": "No invariant is canonical until it survives E—every Source Code quote must be traceable to the concept doc.",
+      "solobicLogic": "Only verified verbatim substrings pass the canonical validator gate.",
+      "implementation": "assert canonical_quotes.contains(normalize_whitespace(invariant.quote))",
+      "anchor": "inv-mw099-e-check-gate",
+      "canonicalDocQuoteVerified": true,
+      "lineReference": 88
+    }
+  ]
+}

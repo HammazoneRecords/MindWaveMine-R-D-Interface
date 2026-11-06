@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { LogEntry, LogType, FabricationItem } from '../types';
 import { api } from '../services/api';
-import { GoogleGenAI } from "@google/genai";
 
 interface LogViewerProps {
   logs: LogEntry[];
@@ -43,34 +42,14 @@ export const LogViewer: React.FC<LogViewerProps> = ({ logs, isOpen, onToggle, on
     setIsTyping(true);
 
     try {
-      // RAG: Fetch all concepts and fabrications for context
-      const fabrications = await api.getFabrications();
-      const contextText = fabrications
-        .map(f => `[${f.type.toUpperCase()}] Source: ${f.source} | Content: ${f.content}`)
-        .join('\n');
-      
-      // Initialize Gemini API client correctly
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-      // Call generateContent with text prompt and systemInstruction in config
-      const response = await ai.models.generateContent({
-        model: 'gemini-3-flash-preview',
-        contents: `SYSTEM CONTEXT: You are the MindWave Neural Interface. You have access to the research database below. Use it to answer the user query accurately and with the persona of an advanced research AI.
-              
-RESEARCH DATABASE:
-${contextText}
-
-USER QUERY: ${userMessage}`,
-        config: {
-          systemInstruction: "Respond in a sleek, technical, yet helpful tone. Refer to concepts by their source and type if relevant. If information is not in the database, indicate that you are accessing general galactic knowledge. Maintain the Andromedan tech agency persona.",
-          temperature: 0.2,
-        }
-      });
-
-      // Directly access .text property from response
-      const aiText = response.text || "Neural connection timeout. Re-linking...";
-      setChatHistory(prev => [...prev, { role: 'model', text: aiText }]);
-    } catch (error) {
-      setChatHistory(prev => [...prev, { role: 'model', text: "CRITICAL: Neural handshake failure. Check API key status." }]);
+      // Call server-side RAG proxy
+      const reply = await api.chatWithCore(userMessage);
+      setChatHistory(prev => [...prev, { role: 'model', text: reply }]);
+    } catch (error: any) {
+      setChatHistory(prev => [...prev, {
+        role: 'model',
+        text: `Neural handshake failure: ${error?.message || 'Check GEMINI_API_KEY status.'}`
+      }]);
       console.error(error);
     } finally {
       setIsTyping(false);

@@ -1,4 +1,3 @@
-
 export interface ScriptResult {
   success: boolean;
   stdout: string;
@@ -48,6 +47,7 @@ export interface IngestedFile {
   type: string; // 'text' | 'image' | 'unknown'
   url: string;
   lastModified: number;
+  rawText?: string;
 }
 
 export interface ExtractionResult {
@@ -74,4 +74,42 @@ export interface SearchResult {
   title: string;
   snippet: string;
   match_score: number;
+}
+
+export interface WorkflowCheckItem {
+  id: string;
+  phase: 'phase_a' | 'phase_b' | 'phase_c' | 'enhancement';
+  code: string;
+  title: string;
+  rule: string;
+  governingPrinciple: string;
+  completed: boolean;
+  verified: boolean;
+  evidence?: string;
+}
+
+export interface InvariantRecord {
+  id: string;
+  conceptId: string;
+  conceptTitle: string;
+  sourceCodeQuote: string; // verbatim english quote
+  solobicLogic: string;
+  implementation: string;
+  anchor: string;
+  canonicalDocQuoteVerified: boolean;
+  lineReference?: number;
+}
+
+export interface WorkflowBatchState {
+  currentBatch: string;
+  nextBatch: string;
+  activeConceptId: string;
+  lastRunDate: string;
+  overallStatus: 'STABLE' | 'DRIFT' | 'IN_PROGRESS';
+  invariantsCount: number;
+  checksSummary: {
+    total: number;
+    passed: number;
+    failed: number;
+  };
 }
